@@ -5,17 +5,11 @@
 const userNum = prompt("Scrivi un numero di 4 cifre");
 console.log(userNum);
 
-// Divido la stringa in singoli caratteri (ancora non sono considerati come numeri)
-const myArray = userNum.split("");
-console.log(myArray);
+// Creo un ciclo che somma i componenti della stringa appena creata
+let result = 0;
+for (let i = 0; i < userNum.length; i++) {
+    result += parseInt(userNum[i]); 
+    console.log(i, typeof(i));   
+}
 
-// Sommo i numeri dell'array
-// let result = 0;
-// for (let i = 0; i < myArray.length; i++) {
-//     result += +myArray[i];    
-// }
-
-// console.log(result);
-
-const result = parseInt(myArray[0]) + parseInt(myArray[1]) + parseInt(myArray[2]) + parseInt(myArray[3]);
-console.log(result);
+console.log("La somma dei numeri inseriti è: ", result);
