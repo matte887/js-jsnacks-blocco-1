@@ -24,4 +24,5 @@ if (firstWordLenght > secondWordLenght) {
 }
 
 console.log(result);
+document.getElementById("result").innerHTML = result;
 
